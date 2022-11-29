@@ -1,0 +1,42 @@
+{
+    "meta": {
+        "label": "Toggle rebuild behavior tag",
+        "description": "Enable or disable tag for rebuild behavior on every dataset",
+        "icon": "icon-tag"
+    },
+
+    "impersonate": false,
+    "params": [
+        {
+            "name": "rebuild_tag",
+            "label": "Toogle rebuild tag",
+            "type": "BOOLEAN",
+            "defaultValue": false,
+            "mandatory": true
+        },
+        {
+            "name": "strat_tag",
+            "label": "Choose the tagging strategy",
+            "type": "SELECT",
+            "selectChoices": [
+                { "value": "LOCK", "label": "Locked datasets only (Explicit, Write-protected)"},
+                { "value": "ALL", "label": "Every datasets, included normal rebuild"}
+            ],
+            "defaultValue": "LOCK",
+            "visibilityCondition" : "model.rebuild_tag"
+        }
+    ],
+    "permissions": [],
+
+    "resultType": "NONE",
+    "resultLabel": "my production",
+    "extension": "txt",
+    "mimeType": "text/plain",
+
+    "macroRoles": [
+        {
+            "type": "PROJECT_MACROS",
+            "targetParamsKey": "input_project"
+        }
+    ]
+}

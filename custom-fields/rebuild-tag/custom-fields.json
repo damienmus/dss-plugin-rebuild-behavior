@@ -1,0 +1,39 @@
+{
+    "meta": {
+        "label": "rebuild-tag",
+        "description": "rebuild tag feature status",
+        "icon": "icon-puzzle-piece"
+    },
+    "customFields": [
+        {
+            "applyToObjects": {
+                "mode": "SOME",
+                "includedObjectTypes": ["PROJECT"]
+            },
+            "field": {
+                "name": "enable_rebuild_tag",
+                "label": "enable rebuild behavior tag",
+                "type": "BOOLEAN",
+                "defaultValue": false,
+                "mandatory": true
+            }
+        },
+        {
+            "applyToObjects": {
+                "mode": "SOME",
+                "includedObjectTypes": ["PROJECT"]
+            },
+            "field": {
+                "name": "strat_rebuild_tag",
+                "label": "tagging strategy rebuild behavior",
+                "type": "SELECT",
+                "selectChoices": [
+                    { "value": "LOCK", "label": "Locked datasets only (Explicit, Write-protected)"},
+                    { "value": "ALL", "label": "Every datasets, included normal rebuild"}
+                ],
+                "defaultValue": "LOCK",
+                "mandatory": true
+            }
+        }
+    ]
+}

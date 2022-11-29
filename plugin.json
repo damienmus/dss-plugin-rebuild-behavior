@@ -1,0 +1,14 @@
+{
+    "id": "rebuild-behavior",
+    "version": "0.0.1",
+
+    "meta": {
+        "label": "Rebuild behavior",
+        "description": "Better rebuild behavior management",
+        "author": "Damien MUSCEDERE",
+        "icon": "icon-refresh",
+        "tags": ["Productivity"],
+        "url": "",
+        "licenseInfo": "Apache Software License"
+    }
+}

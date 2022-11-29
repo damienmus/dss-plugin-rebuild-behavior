@@ -1,0 +1,43 @@
+{
+    "meta": {
+        "label": "Change rebuild behavior",
+        "description": "Set the rebuild behavior of multiple datasets",
+        "icon": "icon-refresh"
+    },
+
+    "impersonate": false,
+
+    "params": [
+        {
+            "name": "rebuild_behavior",
+            "label": "Rebuild Behavior",
+            "type": "SELECT",
+            "selectChoices": [
+                { "value": "NORMAL", "label": "Normal"},
+                { "value": "EXPLICIT", "label": "Explicit"},
+                { "value": "WRITE_PROTECT", "label": "Write-protected"}
+            ],
+            "defaultValue": "NORMAL",
+            "mandatory": true
+        },
+        {
+            "name": "input_datasets",
+            "label": "Input datasets",
+            "type": "DATASETS"
+        }
+    ],
+    "permissions": [],
+    
+    "resultType": "NONE",
+    "resultLabel": "my production",
+    "extension": "txt",
+    "mimeType": "text/plain",
+
+    "macroRoles": [
+        {
+            "type": "DATASETS",
+            "targetParamsKey": "input_datasets",
+            "applicableToForeign": false
+        } 
+    ]
+}
